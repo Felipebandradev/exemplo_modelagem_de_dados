@@ -1,2 +1,3 @@
-# exemplo_modelagem_de_dados
- Modelagem Lógica usando MySQLworkbanch
+#  Modelagem Lógica usando MySQLworkbanch
+
+Atividades de estudo de modelagem de banco de dados
