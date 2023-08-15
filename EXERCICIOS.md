@@ -33,7 +33,7 @@ CREATE TABLE filmes(
 );
 
 
--- para criar/linkar  a chave estrangeira 
+-- para criar/referênciar a chave estrangeira 
 ALTER TABLE filmes
     ADD CONSTRAINT fk_filmes_generos
     FOREIGN KEY (genero_id) REFERENCES generos(id); 
