@@ -14,14 +14,17 @@ Você deve:
 
 ```sql
 
+-- Para criar um  banco de dados
 CREATE DATABASE catalogo_de_filmes CHARACTER SET utf8mb4;
 
+-- para criar a tabela Genêros 
 CREATE TABLE generos(
     id INT NOT NULL PRiMARY KEY AUTO_INCREMENT,
     nome_genero VARCHAR(45) NOT NULL
 ); 
 
 
+-- para criar a tabelas Filmes
 CREATE TABLE filmes(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     titulo_filme VARCHAR(45) NOT NULL,
@@ -30,6 +33,7 @@ CREATE TABLE filmes(
 );
 
 
+-- para criar/linkar  a chave estrangeira 
 ALTER TABLE filmes
     ADD CONSTRAINT fk_filmes_generos
     FOREIGN KEY (genero_id) REFERENCES generos(id); 
