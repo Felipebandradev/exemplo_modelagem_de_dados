@@ -4,13 +4,13 @@
 
 ### Criar banco de dados
 
-```
+```sql
 CREATE DATABASE vendas CHARACTER SET utf8mb4;
 ```
 
 ### Criar tabela de fabricantes
 
-```
+```sql
 CREATE TABLE fabricantes(
     id INT NOT NULL PRiMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL
