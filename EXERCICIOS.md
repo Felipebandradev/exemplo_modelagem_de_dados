@@ -10,6 +10,33 @@ Você deve:
 - Criar duas tabelas (Gêneros e Filmes)
 - Fazer o relacionamento entre as tabelas
 
+## Exercício resolvido:
+
+```sql
+
+CREATE DATABASE catalogo_de_filmes CHARACTER SET utf8mb4;
+
+CREATE TABLE generos(
+    id INT NOT NULL PRiMARY KEY AUTO_INCREMENT,
+    nome_genero VARCHAR(45) NOT NULL
+); 
+
+
+CREATE TABLE filmes(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    titulo_filme VARCHAR(45) NOT NULL,
+    ano_de_lancamento YEAR(4) NOT NULL,
+    genero_id INT NOT NULL
+);
+
+
+ALTER TABLE filmes
+    ADD CONSTRAINT fk_filmes_generos
+    FOREIGN KEY (genero_id) REFERENCES generos(id); 
+
+
+```
+
 **15/08/2023**
 
 ## Crie no MySQL Workbench o modelo lógico para 2 entidades:
