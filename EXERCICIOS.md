@@ -8,7 +8,7 @@
 
 ## Exercício resolvido:
 
-1) etapa :
+1) etapa : <br>
 ![criação do banco de dados usando interface grafica](criacao_banco_de_dados.png)
 
 2) etapa:
