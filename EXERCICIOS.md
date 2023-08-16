@@ -1,5 +1,27 @@
 # Exercícios de Modelagem
 
+
+**17/08/2023**
+
+## Refaça o exercício anterior de modelagem física (banco de dados de catalogo de Filmes e Gêneros) usando somente ferramentas da interface gráfica do phpMyAdmin.
+
+
+## Exercício resolvido:
+
+1) etapa :
+![criação do banco de dados usando interface grafica](criacao_banco_de_dados.png)
+
+2) etapa:
+![criação da tabela genêro usando interface grafica](tabela_genero.png)
+
+3) etapa:
+![criação da tabela filmes usando interface grafica](tabela_filmes.png)
+
+4) etapa:
+![criação da chave estrangeira usando interface grafica](criacao_chave_estrangeira.png)
+
+---
+
 **16/08/2023**
 
 ## No phpMyAdmin utilize comandos SQL para fazer a modelagem física do exercício anterior.
