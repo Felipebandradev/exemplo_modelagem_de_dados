@@ -194,6 +194,35 @@ DELETE FROM fabricantes WHERE id = 1;  -- ⚠️☠️NÃO SE ESQUEÇA DO WHERE!
 
 ```
 
+---
+
+## SELECT: outras formas de uso
+
+### Classificando
+```sql
+SELECT nome, preco FROM produtos ORDER BY nome;
+SELECT nome, preco FROM produtos ORDER BY preco;
+SELECT nome, preco FROM produtos ORDER BY preco DESC;
+
+-- DESC: classificação em ordem decrescente
+-- ASC (padrão): Classificação em ordem Crescente
+
+SELECT nome, preco FROM produtos
+    WHERE quantidade = 20 ORDER BY nome;
+```
+
+### Busca de dados
+
+```sql
+SELECT nome, descricao FROM produtos 
+    WHERE descricao LIKE '%sistema%';
+
+SELECT nome, descricao FROM produtos 
+    WHERE descricao LIKE '%tela%' OR nome LIKE '%variavel%';
+
+-- Usamos o operador LIKE e o Caractere coringa (%) para permitir uma busca da palavra indicada em qualquer posição dentro do texto. Neste contexto, o % significa 'qualquer texto' antes da palavra ou depois da palavra
+```
+
 
 
 
