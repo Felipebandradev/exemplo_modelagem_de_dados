@@ -164,6 +164,22 @@ SELECT nome, preco FROM produtos
     WHERE fabricante_id NOT IN(3,5);
 ```
 
+---
+
+## UPDATE
+
+```sql
+UPDATE fabricantes SET nome = 'Asus do Brasil'
+    WHERE id = 1; -- ⚠️☠️NÃO SE ESQUEÇA DO WHERE!! PERIGO!☠️⚠️
+
+UPDATE produtos SET preco = 6549.74
+    WHERE id = 4;
+-- Alteres a quantidade dos dos produtos da Apple e da LG para 20
+
+UPDATE produtos SET quantidade = 20
+    WHERE fabricante_id IN (3, 5);
+
+```
 
 
 
