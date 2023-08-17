@@ -104,17 +104,21 @@ SELECT nome, preco FROM produtos;
 SELECT preco, nome FROM produtos;
 
 -- Sendo mais criterioso
-SELECT nome, preco, quantidade FROM produtos WHERE preco < 5000;
+SELECT nome, preco, quantidade FROM produtos
+     WHERE preco < 5000;
 
--- EXERCÍCIO mostre nome e descrição só dos produtos da apple
-SELECT nome, descricao FROM produtos WHERE fabricante_id = 3;
+-- EXERCÍCIO: mostre nome e descrição só dos produtos da apple
+SELECT nome, descricao FROM produtos
+     WHERE fabricante_id = 3;
 
 ```
 
 ### Operadores Lógicos: E (AND), OU (OR), NÃO (NOT)
 
+
+#### E
+
 ```sql
--- Operador E(AND)
 SELECT nome, preco FROM produtos 
     WHERE preco >= 2000 AND  preco <= 6000;
 
@@ -124,6 +128,45 @@ SELECT nome, preco FROM produtos
     WHERE preco > 5000 AND  preco <= 6000;
 
 ```
+
+#### OU
+
+```sql
+
+SELECT nome, preco FROM produtos 
+    WHERE preco > 5000 OR  preco <= 3000;
+
+-- EXERCÍCIO: Exiba nome e preço somente dos produtos da apple e da LG
+SELECT nome, preco FROM produtos
+    WHERE fabricante_id = 3 OR fabricante_id = 5;
+
+-- Versão usando a função IN() 
+-- IN = DENTRO
+SELECT nome, preco FROM produtos
+    WHERE fabricante_id IN(3, 5);
+
+```
+
+#### NÃO 
+
+```sql
+
+SELECT nome, descricao, preco FROM produtos
+    WHERE NOT fabricante_id = 9;
+
+-- Versão usando o operador relacional de diferença
+-- ! = Diferente 
+SELECT nome, descricao, preco FROM produtos
+    WHERE  fabricante_id != 9;
+
+
+SELECT nome, preco FROM produtos
+    WHERE fabricante_id NOT IN(3,5);
+```
+
+
+
+
 
 
 
