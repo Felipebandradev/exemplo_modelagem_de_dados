@@ -223,6 +223,46 @@ SELECT nome, descricao FROM produtos
 -- Usamos o operador LIKE e o Caractere coringa (%) para permitir uma busca da palavra indicada em qualquer posição dentro do texto. Neste contexto, o % significa 'qualquer texto' antes da palavra ou depois da palavra
 ```
 
+### Operações e Funções de agregação
+
+```sql
+SELECT SUM(preco)  FROM produtos; -- SOMA
+SELECT SUM(preco) as Total FROM produtos; -- Alias/apelido
+
+-- Exemplo de alias/apelido para outras colunas
+SELECT nome as Produto, preco as "Preço" FROM produtos;
+SELECT nome  Produto, preco  "Preço" FROM produtos;
+
+--Média e ARREDONDAMENTO
+SELECT AVG(preco) as "Média dos Preços" FROM produtos;
+SELECT ROUND(AVG(preco)) as "Média dos Preços" FROM produtos;
+-- Arredondamento com a casa decimal
+SELECT ROUND(AVG(preco),2) as "Média dos Preços" FROM produtos;
+
+
+--Contagem
+
+SELECT COUNT(id) as "Qtd de Produtos" FROM produtos;
+
+
+--  DISTINCT é uma cláusula/flag que evita a duplicidade na contagem de registros
+-- Usando o DISTINCT para evitar a contagem de itens repitidos
+SELECT COUNT(DISTINCT fabricante_id) as "Qtd de Fabricantes com Produtos" FROM produtos;
+```
+
+### Operações Matemáticas
+
+```sql
+SELECT nome, preco, quantidade, (preco * quantidade) as Total
+FROM produtos;
+```
+
+### Segmentação/Agrupamento de resultados
+
+```sql
+SELECT fabricante_id, SUM(preco) as Total FROM produtos
+GROUP BY fabricante_id;
+```
 
 
 
