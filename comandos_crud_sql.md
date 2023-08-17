@@ -85,4 +85,46 @@ VALUES (
 
 ![Tabela produtos depois do CRUD](tabela_produtos_depois_do_crud.png)
 
+---
+
+## SELECT (READ)
+
+```sql
+
+-- Query
+
+-- Para exibir todas as colunas da tabela
+SELECT * FROM produtos;
+SELECT * FROM fabricantes;
+
+-- Para exibir somente os nome e preço dos produtos
+SELECT nome, preco FROM produtos;
+
+-- mudando apenas a ordem de exibição
+SELECT preco, nome FROM produtos;
+
+-- Sendo mais criterioso
+SELECT nome, preco, quantidade FROM produtos WHERE preco < 5000;
+
+-- EXERCÍCIO mostre nome e descrição só dos produtos da apple
+SELECT nome, descricao FROM produtos WHERE fabricante_id = 3;
+
+```
+
+### Operadores Lógicos: E (AND), OU (OR), NÃO (NOT)
+
+```sql
+-- Operador E(AND)
+SELECT nome, preco FROM produtos 
+    WHERE preco >= 2000 AND  preco <= 6000;
+
+-- A query Abaixo não retorna registros 
+-- já que as condições não foram totalmente atendidas atendidas
+SELECT nome, preco FROM produtos 
+    WHERE preco > 5000 AND  preco <= 6000;
+
+```
+
+
+
 
